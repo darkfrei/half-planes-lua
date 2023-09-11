@@ -32,10 +32,11 @@ if pointIntersection then
 else
     print("No Intersection")
 end
+```
 
 ```lua
 -- check if the point is inside of half plane:
 local testPoint = {x = 4, y = 5}
 local isInside = halfPlane:contains(testPoint)
 print("Point inside the half-plane:", isInside)
-
+```
