@@ -22,7 +22,7 @@ You can include this library in your Lua project by simply copying the relevant 
 ## Usage
 
 ```lua
--- Example usage of ray-to-half-plane intersection
+-- half planes intersection:
 local halfPlane = HalfPlanesLib:new({x = 200, y = 300}, -2, 1) -- point and direction as vector (not normilized)
 local halfPlane2 = HalfPlanesLib:new({x = 300, y = 200}, 1, -6)
 local pointIntersection = halfPlane:getIntersectionPoint(halfPlane2)
@@ -33,6 +33,8 @@ else
     print("No Intersection")
 end
 
+```lua
+-- check if the point is inside of half plane:
 local testPoint = {x = 4, y = 5}
 local isInside = halfPlane:contains(testPoint)
 print("Point inside the half-plane:", isInside)
