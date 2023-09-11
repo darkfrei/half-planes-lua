@@ -22,6 +22,7 @@ You can include this library in your Lua project by simply copying the relevant 
 ## Usage
 
 ```lua
+local HalfPlanesLib = require ('HalfPlanesLib')
 -- half planes intersection:
 local halfPlane = HalfPlanesLib:new({x = 200, y = 300}, -2, 1) -- point and direction as vector (not normilized)
 local halfPlane2 = HalfPlanesLib:new({x = 300, y = 200}, 1, -6)
@@ -38,6 +39,8 @@ end
 
 
 ```lua
+local HalfPlanesLib = require ('HalfPlanesLib')
+local halfPlane = HalfPlanesLib:new({x = 200, y = 300}, -2, 1) -- point and direction as vector (not normilized)
 -- check if the point is inside of half plane:
 local testPoint = {x = 4, y = 5}
 local isInside = halfPlane:contains(testPoint)
